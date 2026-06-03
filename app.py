@@ -14,8 +14,8 @@ st.set_page_config(
     layout="centered"
 )
 
-# Refresh page every 30 seconds
-st_autorefresh(interval=30000, key="sensex_refresh")
+# Refresh page every 3 Minutes
+st_autorefresh(interval=300000, key="sensex_refresh")
 
 # ==========================================================
 # STYLES
@@ -62,7 +62,7 @@ st.markdown("""
 # SENSEX DATA
 # ==========================================================
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=300)
 def get_sensex_data():
 
     try:
